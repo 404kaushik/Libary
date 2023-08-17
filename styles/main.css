@@ -1,0 +1,382 @@
+@import url("reset.css"); 
+/* import google font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* the html element*/
+:root {
+  --dark: #fd3503;
+  --back: #fff;
+  --borders: #000000;
+  --other: #76877d;
+  color: #492cdb; /* fallback for browsers that don't t variables */
+  background-color: #fff;
+  background-color: var(--dark);
+  color: var(--dark);
+  font-family: "Krona One", sans-serif; /*google font*/
+}
+
+body{
+  background: linear-gradient(to right, blue, pink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  margin: 1em;
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 106), rgb(109, 4, 148));
+  color:#492cdb;
+  display: flex;
+  border-radius: 0.5em;
+  padding: 0.2em;
+  border: 0.3em solid var(--borders);
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+header>div h1{
+  font-family: 'Lucida Sans';
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  margin: 1em;
+  flex-direction: row;
+  width: auto;
+}
+
+section {
+  background-color: var(--back);
+  border: 0.3em solid var(--borders);
+  color: var(--borders);
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  flex: 1;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: 30px;
+}/*Making a grid for my books and the elements for particular book*/
+
+.box {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+} 
+
+.Class{
+    flex-direction: row-reverse;
+}
+  
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+
+header h1{
+    align-self: center;
+    font-size: 4rem;
+    text-shadow:0px 0px 5px yellow, 0px -5px 5px red;
+}
+  
+  /* style the animated header */
+.animated-header {
+    animation: color-change 1s infinite;
+}
+  
+/* define keyframe animation */
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: green; }
+}
+
+
+section h2{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 0.2em solid var(--borders);
+}
+
+
+form{
+    padding-left: 1em;
+    align-self: flex-start;
+    border-top: 0.3em solid var(--other);
+    border-bottom: 0.5em solid var(--other);
+}
+
+form>div,
+form fieldset {
+    display:flex;
+    margin: 1em 0;
+}
+
+form>div{
+    flex-direction: column;
+}
+
+form>div .good{
+
+    display:flex;
+    font-family:serif;
+    margin:1em 0;
+}
+
+fieldset div{
+    margin: 1em 5em 1em 1em;
+}
+
+form label{
+    text-transform: uppercase;/* Convert the text to uppercase */
+    font-size: 1em;/* Set the font size for the label */
+    letter-spacing: 0.3em;/* Add some letter spacing to the label */
+    margin-bottom: 0.5em;/* Add spacing below the label */
+}
+
+form input{
+    background: rgba(9, 56, 36, 0.1); /*setting up the color for the whole page*/
+    outline: none;
+    border-radius: 0.2em;
+    border: none;
+    font-size: 0.9em;
+    padding: 1em;
+    color: var(--dark);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1em;
+    box-shadow: 10px 10px;
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    border: 2px solid #1CB5E0;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+
+nav a:active,
+nav a,
+nav a:visited,
+button {
+  display: block; /* Make the elements fill their container */
+  padding: 1em; /* Add some padding to the elements */
+  border-radius: 0.5em; /* Add some rounded corners */
+  background-color: rgb(111, 113, 141); /* Set the background color */
+  border: 0.3em solid var(--back); /* Set the border color */
+  color: var(--back); /* Set the text color */
+  text-align: center;/* Center the text within the element */
+  box-shadow: 0em 0.2em 0.3em rgba(9, 56, 36, 0.5);/* Add a box shadow for a 3D effect */
+  text-decoration: none; /* Remove the underline for links */
+}
+
+nav a:hover,
+button:hover {
+  background-color: var(--back);/* Change the background color */
+  border: 0.3em solid var(--borders); /* Change the border color */
+  color: var(--borders); /* Change the text color */
+  border-radius: 0.5em; /* Add some rounded corners */
+}
+
+button {
+    font-size: 1.2em; /* Set the font size for buttons */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Add a box shadow for a 3D effect
+  */
+}
+
+.nav_bottom {
+    display: grid; /* Use a grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Set the column layout */
+    grid-gap: 25px; /* Add some space between the grid items */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: grey;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: move 10s linear infinite;
+}
+  
+/* define keyframe animation for the footer to keep sliding in */
+@keyframes move {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+
+.error {
+    color: var(--borders);
+    display: block;
+    margin: 1em;
+    font-weight: bold; 
+}
+
+.hidden {
+    display: none;
+}
+
+/* .bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    display: hidden;
+}
+
+.modal-content{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+}
+
+.close{
+    position: absolute;
+    top:0;
+    right:14px;
+    font-size: 42px;
+    transform:rotate(45deg);
+    cursor: pointer;
+}
+*/
+
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: trasnform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+.input-box{
+    width:100%;
+    position: relative;
+}
+
+.input-box input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    outline:none;
+    color: rgb(7, 7, 7);
+    background: rgba(9, 56, 36, 0.1); /*setting up the color for the whole page*/
+}
+
+#message{
+    position: absolute;
+    bottom: -30px;
+    color: rgb(12, 11, 11);
+    font-size: 0.9em;
+    display:none;
+}
+
+
+.star-rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    font-size: 0;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.star-rating label:before {
+    content: "\2605";
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+}
+
+.star-rating input:checked ~ label:before {
+    opacity: 1;
+    color: #f90;
+}
+
+.star-rating label:hover:before,
+.star-rating label:hover ~ label:before {
+    opacity: 1;
+    color: #f90;
+}
