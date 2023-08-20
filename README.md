@@ -11,3 +11,7 @@ This is a basic working Library where a user is created and after the account is
 
 ## Main Page
 <img width="1470" alt="mainpage1" src="https://github.com/404kaushik/Libary/assets/138563218/7ebfdd35-dba3-4e1f-905d-ab1afa52efbd">
+<img width="1470" alt="mainpage2" src="https://github.com/404kaushik/Libary/assets/138563218/38fbacc1-9424-4f1a-9b3e-252b814fa0a0">
+<img width="1470" alt="mainpage44" src="https://github.com/404kaushik/Libary/assets/138563218/9af58482-a0fc-4d9b-87d9-a765ff01a336">
+
+
